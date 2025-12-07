@@ -24,7 +24,11 @@ const InstallationGuide = () => {
               <p className="text-sm text-muted-foreground">Популярный загрузчик модов</p>
             </div>
           </div>
-          <Button variant="outline" className="w-full">
+          <Button 
+            variant="outline" 
+            className="w-full"
+            onClick={() => window.open('https://files.minecraftforge.net/', '_blank')}
+          >
             <Icon name="ExternalLink" size={16} className="mr-2" />
             Скачать Forge
           </Button>
@@ -40,7 +44,11 @@ const InstallationGuide = () => {
               <p className="text-sm text-muted-foreground">Легкий современный загрузчик</p>
             </div>
           </div>
-          <Button variant="outline" className="w-full">
+          <Button 
+            variant="outline" 
+            className="w-full"
+            onClick={() => window.open('https://fabricmc.net/use/installer/', '_blank')}
+          >
             <Icon name="ExternalLink" size={16} className="mr-2" />
             Скачать Fabric
           </Button>
