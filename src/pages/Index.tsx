@@ -16,6 +16,7 @@ interface Mod {
   version: string
   author: string
   image: string
+  downloadUrl: string
 }
 
 const mods: Mod[] = [
@@ -27,7 +28,8 @@ const mods: Mod[] = [
     downloads: 152487,
     version: "1.20.4",
     author: "sp614x",
-    image: "🎮"
+    image: "🎮",
+    downloadUrl: "https://optifine.net/downloads"
   },
   {
     id: 2,
@@ -37,7 +39,8 @@ const mods: Mod[] = [
     downloads: 98342,
     version: "1.20.4",
     author: "techbrew",
-    image: "🗺️"
+    image: "🗺️",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/journeymap"
   },
   {
     id: 3,
@@ -47,7 +50,8 @@ const mods: Mod[] = [
     downloads: 124569,
     version: "1.20.2",
     author: "Glitchfiend",
-    image: "🌲"
+    image: "🌲",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty"
   },
   {
     id: 4,
@@ -57,7 +61,8 @@ const mods: Mod[] = [
     downloads: 201893,
     version: "1.20.4",
     author: "mezz",
-    image: "📦"
+    image: "📦",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/jei"
   },
   {
     id: 5,
@@ -67,7 +72,8 @@ const mods: Mod[] = [
     downloads: 87654,
     version: "1.20.1",
     author: "AlgorithmX2",
-    image: "⚡"
+    image: "⚡",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2"
   },
   {
     id: 6,
@@ -77,7 +83,8 @@ const mods: Mod[] = [
     downloads: 143267,
     version: "1.19.2",
     author: "mDiyo",
-    image: "🔨"
+    image: "🔨",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/tinkers-construct"
   },
   {
     id: 7,
@@ -87,7 +94,8 @@ const mods: Mod[] = [
     downloads: 112458,
     version: "1.20.2",
     author: "Benimatic",
-    image: "🌙"
+    image: "🌙",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest"
   },
   {
     id: 8,
@@ -97,7 +105,8 @@ const mods: Mod[] = [
     downloads: 167832,
     version: "1.20.1",
     author: "simibubi",
-    image: "⚙️"
+    image: "⚙️",
+    downloadUrl: "https://www.curseforge.com/minecraft/mc-mods/create"
   }
 ]
 
@@ -232,7 +241,11 @@ const Index = () => {
                       </Badge>
                     </div>
 
-                    <Button className="w-full" size="sm">
+                    <Button 
+                      className="w-full" 
+                      size="sm"
+                      onClick={() => window.open(mod.downloadUrl, '_blank')}
+                    >
                       <Icon name="Download" size={16} className="mr-2" />
                       Скачать
                     </Button>
