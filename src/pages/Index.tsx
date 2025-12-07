@@ -12,7 +12,7 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
 
-  const categories = ['all', 'Оптимизация', 'Утилиты', 'Биомы', 'Технологии', 'Инструменты', 'Приключения']
+  const categories = ['all', 'Оптимизация', 'Утилиты', 'Биомы', 'Технологии', 'Инструменты', 'Приключения', 'Магия', 'Выживание', 'Мобы', 'Улучшения']
 
   const filteredMods = mods.filter(mod => {
     const matchesSearch = mod.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
